@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=backspace" />
+    <title>Calculator</title>
+</head>
+
+<body>
+    <header>
+        <div class="border">
+            <div class="result">
+                <input readonly placeholder="0" id="display">
+            </div>
+            <div class="buttons">
+                <div class="wrap">
+                    <button class="top" id="delet"><span class="material-symbols-outlined">
+                            backspace
+                        </span></button>
+                    <button onclick="clearAll()" class="top">AC</button>
+                    <button onclick="addToInput('%')" class="top">%</button>
+                    <button onclick="addToInput('/')" class="operator division">÷</button>
+
+                    <button onclick="addToInput('7')" class="">7</button>
+                    <button onclick="addToInput('8')" class="">8</button>
+                    <button onclick="addToInput('9')" class="">9</button>
+                    <button onclick="addToInput('*')" class="operator">x</button>
+
+                    <button onclick="addToInput('4')" class="">4</button>
+                    <button onclick="addToInput('5')" class="">5</button>
+                    <button onclick="addToInput('6')" class="">6</button>
+                    <button onclick="addToInput('-')" class="operator">-</button>
+
+                    <button onclick="addToInput('1')" class="">1</button>
+                    <button onclick="addToInput('2')" class="">2</button>
+                    <button onclick="addToInput('3')" class="">3</button>
+                    <button onclick="addToInput('+')" class="operator">+</button>
+
+                    <button onclick="addToInput('')" id="Pi">π</button>
+                    <button onclick="addToInput('0')" class="">0</button>
+                    <button onclick="addToInput('.')" class="">,</button>
+                    <button onclick="calcul()" class="operator">=</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
