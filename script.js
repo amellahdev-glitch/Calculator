@@ -5,6 +5,11 @@ const piBtn = document.querySelector('#Pi');
 // Add the value clicked to the display
 function addToInput(input) {
     display.value += input
+    for (let i = 0; i < display.value.length; i++) {
+        if (display.value[i] === ",") {
+            display.value = display.value.replace(",", ".");
+        }
+    }
 }
 
 // Calculate the result using eval
