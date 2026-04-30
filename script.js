@@ -4,7 +4,16 @@ const piBtn = document.querySelector('#Pi');
 
 // Add the value clicked to the display
 function addToInput(input) {
-    display.value += input
+
+    if (input === "*") {
+        display.value += "x";
+    } else if (input === "/") {
+        display.value += "÷";
+    } else {
+        display.value += input
+    }
+
+
     for (let i = 0; i < display.value.length; i++) {
         if (display.value[i] === ",") {
             display.value = display.value.replace(",", ".");
@@ -15,12 +24,11 @@ function addToInput(input) {
 // Calculate the result using eval
 
 function calcul() {
-    display.value = eval(display.value);
-    for (let i = 0; i < display.value.length; i++) {
-        if (display.value[i] === ".") {
-            display.value = parseFloat(display.value).toFixed(2);
-        }
-    }
+
+    let expretion = display.value.replace(/x/g, "*")
+        .replace(/÷/g, "/")
+
+    display.value = eval(expretion);
 }
 
 // Clear the display
